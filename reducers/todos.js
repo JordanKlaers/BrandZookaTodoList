@@ -8,7 +8,6 @@ const todo = (state, action) => {
         showButtons: false
       }
     case 'TOGGLE_TODO':
-    console.log(action.id);
       if (state.id !== action.id) {
         return state
       }

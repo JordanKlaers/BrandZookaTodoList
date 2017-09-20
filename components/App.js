@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
-const desk = require("file-loader!./desk.png");
+const desk = require("file-loader!../images/desk.png");
 const notepad = require("file-loader!../images/notepad.png")
 const styles = {
   background:{

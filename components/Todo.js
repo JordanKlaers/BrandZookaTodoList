@@ -1,22 +1,14 @@
 import React, { PropTypes } from 'react'
 
-const styles={
-  item:{
-
-
-  }
-}
-
-
 
 
 const Todo = ({ deleteTodo, toggleButtons, markCompleted, completed, text, toggle }) => {
-  console.log(toggle);
+
   if(toggle){
     return  (
         <li>
 
-          <div style={{textDecoration: completed ? 'line-through' : 'none', marginBottom: '9px', maxWidth: '250px', minWidth: '250px'}} onMouseEnter={toggleButtons} onMouseLeave={toggleButtons}>
+          <div style={{textDecoration: completed ? 'line-through' : 'none',fontFamily: 'Indie Flower', marginBottom: '9px', maxWidth: '250px', minWidth: '250px'}} onMouseLeave={toggleButtons}>
             <button style={{'margin': '5px'}} onClick={deleteTodo}>
               Delete
             </button>
@@ -33,7 +25,7 @@ const Todo = ({ deleteTodo, toggleButtons, markCompleted, completed, text, toggl
     return  (
       <li>
 
-        <div style={{textDecoration: completed ? 'line-through' : 'none', marginBottom: '9px', maxWidth: '250px', minWidth: '250px'}} onMouseEnter={toggleButtons} onMouseLeave={toggleButtons}>
+        <div style={{textDecoration: completed ? 'line-through' : 'none', fontFamily: 'Indie Flower', marginBottom: '9px', maxWidth: '250px', minWidth: '250px'}} onMouseEnter={toggleButtons}>
           <button style={{'margin': '5px', display: 'none'}} onClick={deleteTodo}>
             Delete
           </button>
