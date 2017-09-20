@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const Todo = ({ markCompleted, completed, text }) => (
+const Todo = ({ deleteTodo, markCompleted, completed, text }) => (
   <li>
 
     <div
@@ -8,7 +8,7 @@ const Todo = ({ markCompleted, completed, text }) => (
         textDecoration: completed ? 'line-through' : 'none'
       }}
       >
-        <button style={{'margin': '5px'}}>
+        <button style={{'margin': '5px'}} onClick={deleteTodo}>
           Delete
         </button>
         <button style={{'margin': '5px'}} onClick={markCompleted}>
@@ -21,7 +21,8 @@ const Todo = ({ markCompleted, completed, text }) => (
 )
 
 Todo.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  markCompleted: PropTypes.func.isRequired,
   completed: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired
 }
