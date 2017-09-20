@@ -7,15 +7,13 @@ const todo = (state, action) => {
         completed: false
       }
     case 'TOGGLE_TODO':
+    console.log(action.id);
       if (state.id !== action.id) {
         return state
       }
-      console.log("todo - toggle");
       return Object.assign({}, state, {
         completed: !state.completed
       })
-    case 'DELETE':
-      console.log("delete action from reducer", );
     default:
       return state
   }
@@ -29,14 +27,15 @@ const todos = (state = [], action) => {
         todo(undefined, action)
       ]
     case 'TOGGLE_TODO':
-    console.log("todos - toggle");
       return state.map(t =>
         todo(t, action)
       )
     case 'DELETE':
-      return state.map(t =>
-        todo(t, action)
-      )
+      return state.filter((el,idx)=>{
+        if(action.id !== el.id){
+          return el
+        }
+      })
     default:
       return state
   }
