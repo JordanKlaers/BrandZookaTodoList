@@ -1,13 +1,9 @@
 import React, { PropTypes } from 'react'
 
-
-
 const Todo = ({ deleteTodo, toggleButtons, markCompleted, completed, text, toggle }) => {
-
   if(toggle){
     return  (
         <li>
-
           <div style={{textDecoration: completed ? 'line-through' : 'none',fontFamily: 'Indie Flower', marginBottom: '9px', maxWidth: '250px', minWidth: '250px'}} onMouseLeave={toggleButtons}>
             <button style={{'margin': '5px'}} onClick={deleteTodo}>
               Delete
@@ -17,7 +13,6 @@ const Todo = ({ deleteTodo, toggleButtons, markCompleted, completed, text, toggl
             </button>
             {text}
           </div>
-
         </li>
       )
   }
@@ -39,6 +34,8 @@ const Todo = ({ deleteTodo, toggleButtons, markCompleted, completed, text, toggl
     )
   }
 }
+
+
 
 Todo.propTypes = {
   deleteTodo: PropTypes.func.isRequired,
