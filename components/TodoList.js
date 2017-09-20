@@ -1,8 +1,17 @@
 import React, { PropTypes } from 'react'
 import Todo from './Todo'
 
+const styles= {
+    list: {
+      position: 'absolute',
+      top: '113px',
+      left: '60px',
+    }
+}
+
+
 const TodoList = ({ deleteTodo, todos, onTodoClick }) => (
-  <ul>
+  <ul style={styles.list}>
     {todos.map(todo =>
       <Todo
         key={todo.id}

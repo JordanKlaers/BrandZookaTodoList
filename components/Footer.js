@@ -1,8 +1,17 @@
 import React from 'react'
 import FilterLink from '../containers/FilterLink'
 
+const styles ={
+  footer:{
+    position: "absolute",
+    top: '500px',
+    marginLeft: '100px'
+  }
+}
+
+
 const Footer = () => (
-  <p>
+  <p style={styles.footer}>
     Show:
     {" "}
     <FilterLink filter="SHOW_ALL">
