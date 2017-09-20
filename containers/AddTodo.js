@@ -13,10 +13,10 @@ let AddTodo = ({ dispatch }) => {
           return
         }
         dispatch(addTodo(input.value))
-        input.value = ''
+        input.value = '';
       }}>
         <input ref={node => {
-          input = node
+          input = node;
         }} />
         <button type="submit">
           Add Todo

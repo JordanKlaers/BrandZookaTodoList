@@ -1,13 +1,22 @@
 import React, { PropTypes } from 'react'
 
-const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
+const Todo = ({ markCompleted, completed, text }) => (
+  <li>
+
+    <div
+      style={{
+        textDecoration: completed ? 'line-through' : 'none'
+      }}
+      >
+        <button style={{'margin': '5px'}}>
+          Delete
+        </button>
+        <button style={{'margin': '5px'}} onClick={markCompleted}>
+          Mark Completed
+        </button>
     {text}
+  </div>
+
   </li>
 )
 

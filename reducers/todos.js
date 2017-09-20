@@ -14,6 +14,8 @@ const todo = (state, action) => {
       return Object.assign({}, state, {
         completed: !state.completed
       })
+    case 'DELETE':
+      console.log("delete action from reducer");
     default:
       return state
   }
