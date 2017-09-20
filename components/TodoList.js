@@ -8,7 +8,7 @@ const TodoList = ({ deleteTodo, todos, onTodoClick }) => (
         key={todo.id}
         {...todo}
         markCompleted={() => onTodoClick(todo.id)}
-        deleteTodo={()=> deleteTodo() }
+        deleteTodo={()=> deleteTodo(todo.id) }
       />
     )}
   </ul>
