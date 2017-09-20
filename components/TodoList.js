@@ -10,14 +10,16 @@ const styles= {
 }
 
 
-const TodoList = ({ deleteTodo, todos, onTodoClick }) => (
+const TodoList = ({ deleteTodo, toggleButtons, todos, onTodoClick }) => (
   <ul style={styles.list}>
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
+        toggle={todo.showButtons}
         markCompleted={() => onTodoClick(todo.id)}
-        deleteTodo={()=> deleteTodo(todo.id) }
+        deleteTodo={()=> deleteTodo(todo.id)}
+        toggleButtons={()=> toggleButtons(todo.id)}
       />
     )}
   </ul>
