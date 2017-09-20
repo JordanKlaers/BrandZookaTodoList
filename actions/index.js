@@ -27,3 +27,10 @@ export const deleteTodo = (id) => {
     id
   }
 }
+
+export const toggleButtons = (id) => {
+  return {
+    type: 'TOGGLE_BUTTONS',
+    id
+  }
+}
